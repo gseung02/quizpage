@@ -12,6 +12,8 @@ li{
 .app{
   width: 360px;
   height: 80vh;
+  min-height: 60vh;  /* 화면 높이의 최소 60% */
+  max-height: 90vh;  /* 화면 높이의 최대 90% */
   border: 1px solid #fff;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.22);
@@ -35,8 +37,8 @@ li{
   padding-bottom: 100px;
 }
 .btn-box{
-  width: 300px;
-  height: 300px; 
+  width: 250px;
+  height: 280px; 
   margin-top: 50px;
   padding: 20px 0;
   border-radius: 5px;
@@ -47,10 +49,10 @@ li{
   background-color: #fff;
 }
 .btn-box>button{
-  padding: 10px 80px;
+  padding: 10px 50px;
   margin: 10px 0;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 5px;
   border: none;
   background-color: #493A75;
@@ -62,18 +64,22 @@ li{
 .detail-list,
 .learning,
 .result{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   height: 100%;
   background-color: #03000F;
   border-radius: 15px;
 }
 .detail-list>h2{
-  padding-top: 100px;
+  padding-top: 50px;
 }
 .detail-list>ul{
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  padding: 50px 0;
+  /* padding: 50px 0; */
   border-radius: 5px;
   text-align: start;
 }
@@ -114,15 +120,16 @@ li{
 }
 .quiz{
   height: 200px;
-  padding-top: 150px;
+  padding-top: 80px;
 }
 .quiz>p:nth-child(1){
   color: #8B6FDF;
 }
 .quiz>p:nth-child(2){
-  margin: 50px 0;
+  margin-top: 20px;
+  padding: 20px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
 }
 .learning>input{
   width: 250px;
@@ -135,9 +142,7 @@ li{
   font-size: 20px;
   color: #fff;
 }
-.quiz-btn{
-  margin-top: 120px;
-}
+
 .quiz-btn>button:nth-of-type(1),
 .result>button{
   display: block;
@@ -150,7 +155,7 @@ li{
   padding: 20px;
 }
 
-
+/* 결과 */
 .result{
   display: flex;
   flex-direction: column;
@@ -161,6 +166,20 @@ li{
   margin: 20px 0;
 }
 .result>img{
+  width: 200px;
+  height: 200px;
   margin-top: 20px;
-  margin-bottom: 130px;
+  /* margin-bottom: 130px; */
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+  .app {
+    width: 100%;  /* 화면 크기에 맞춰 너비를 100%로 설정 */
+    height: 80vh;  /* 작은 화면에서는 80% 높이를 사용 */
+  }
+
+  .home {
+    padding: 20px;  /* 작은 화면에서 패딩을 줄여서 공간을 최적화 */
+  }
 }
