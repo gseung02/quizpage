@@ -171,12 +171,15 @@ li{
   margin-top: 20px;
   /* margin-bottom: 130px; */
 }
+.result>button{
+  margin: 20px;
+}
 
 /* 반응형 */
 @media (max-width: 600px) {
   .app {
     width: 100%;  /* 화면 크기에 맞춰 너비를 100%로 설정 */
-    height: 80vh;  /* 작은 화면에서는 80% 높이를 사용 */
+    height: 100vh;  /* 작은 화면에서는 80% 높이를 사용 */
   }
 
   .home {
